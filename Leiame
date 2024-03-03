@@ -1,0 +1,15 @@
+Exemplo de implementação do SpringSecurity:
+
+1- Tornamos a nossa aplicação um cliente OAuth (Oauth2 Client Security)
+
+    - Usamos o GrandType AuthorizationCode (Fornecemos as credenciais da nossa App para serem reconhecidas pelo Google) 
+    - Usamos o Google como provedor de identidade terceirizando a autenticação e a Identificação do usuario(AuthorizationServer)
+    - Acessamos os retornos do Google usando a anotação (@AuthenticationPrincipal) na rota privada: .
+      É retornado um objeto do tipo "OidcUser" nele é contido várias informações      
+       * - OpenID (Token de identidade)
+       * - TokenJWT (Token de acesso)
+
+
+
+2- Tornamos nossa aplicação um ResourceServer (OAuth2 Resource Server)  
+  
